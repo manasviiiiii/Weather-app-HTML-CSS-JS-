@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: rgb(195, 195, 252);
+}
+::selection {
+  color: #fff;
+  background: rgb(136, 136, 255);
+}
+.wrapper {
+  width: 40rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.7rem;
+}
+.wrapper header {
+  color: rgb(153, 153, 255);
+  font-size: 2.1rem;
+  font-weight: 600;
+  padding: 1.6rem 1.5rem;
+  border-bottom: 0.1rem solid rgb(162, 162, 162);
+  display: flex;
+  align-items: center;
+}
+
+.wrapper.active header i {
+  margin-left: 0.5rempx;
+  font-size: 3 rem;
+  cursor: pointer;
+}
+.active .input-part {
+  display: none;
+}
+
+.wrapper .input-part {
+  margin: 2rem 2.5rem 3rem;
+}
+
+.input-part :where(input, button) {
+  width: 100%;
+  height: 5.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.8 rem;
+  border-radius: 0.7rem;
+}
+.input-part input {
+  text-align: center;
+  border: 0.1rem solid rgb(145, 145, 145);
+}
+.input-part .separator {
+  background-color: rgb(145, 145, 145);
+  height: 0.1rem;
+  width: 100%;
+  margin: 2.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-part button {
+  color: #fff;
+  background-color: rgb(153, 153, 255);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.input-part button:hover {
+  background: rgb(195, 195, 252);
+}
+.separator::before {
+  content: "or";
+  background: #fff;
+  font-size: 1.9rem;
+  padding: 0 1.5rem;
+  color: rgb(145, 145, 145);
+}
+.input-part .info-txt {
+  display: none;
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  border-radius: 0.7rem;
+}
+.info-txt.error {
+  display: block;
+  color: #721c24;
+  background: #f8d7da;
+  border: 0.1rem solid #f5c6cb;
+}
+.info-txt.pending {
+  display: block;
+  color: rgb(136, 136, 255);
+  background: rgb(231, 231, 251);
+  border: 0.1rem solid rgb(195, 195, 252);
+}
+.input-part input:is(:focus, :valid) {
+  border: 0.2rem solid rgb(195, 195, 252);
+}
+.input-part input::placeholder {
+  color: #bfbfbf;
+}
+.wrapper .weather-part {
+  margin: 3rem 0 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrapper.active .weather-part {
+  display: flex;
+}
+.weather-part img {
+  max-width: 12.5rem;
+}
+.weather-part .temp {
+  display: flex;
+  font-size: 7.2rem;
+  font-weight: 500;
+}
+.weather-part .temp .numb {
+  font-weight: 600;
+}
+.weather-part .temp .deg {
+  font-size: 4rem;
+  margin: 1rem 0.5rem 0 0;
+  display: block;
+}
+.weather-part .location {
+  display: flex;
+  align-items: center;
+  font-size: 2.1rem;
+  margin-bottom: 3rem;
+}
+.location i {
+  font-size: 2.2rem;
+  margin-right: 0.5rem;
+}
+.weather-part .bottom-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-top: solid 0.1rem rgb(188, 188, 188);
+}
+.weather-part .column {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+}
+.column i {
+  color: rgb(153, 153, 255);
+  font-size: 4rem;
+}
+.humidity {
+  border-left: 1px solid rgb(188, 188, 188);
+}
+.details .temp,
+.humidity span {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: -0.3rem;
+}
+.details .temp .deg {
+  margin: 0;
+  font-size: 1.7rem;
+  pad: 0 0.2rem 0 0.1rem;
+}
+.details p {
+  font-size: 1.4rem;
+  margin-top: -0.6rem;
+}
+.humidity i {
+  font-size: 3.7rem;
+}
+.hidden header i {
+  display: none !important;
+}
