@@ -1,4 +1,4 @@
-Deployed link:
+Deployed link:https://manasvi-weather-app.netlify.app/
 
 I built this project using HTML CSS & JavaScript. I’ve used OpenWeatherMap API to get the weather details of the user entered city or user’s current location.
 I already told you I used vanilla JavaScript to create this weather app. In the JavaScript file, I got the user entered city name and press the enterb key and sent a get request to an OpenWeatherMap API with passing the city name. If the user clicked on the “Get Device Location” button then first I checked the user browser supports geolocation API or not.
